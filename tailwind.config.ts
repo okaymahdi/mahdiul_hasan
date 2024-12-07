@@ -7,6 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
+        tertiary: '#0f0715',
+        quaternary: '#050709',
+        quinary: '#82368C',
+        senary: '#FF6B6B',
+        septenary: '#FFD166',
+        octonary: '#33D9B2',
+        nonary: '#6A3093',
+        denary: '#82368C',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -37,9 +48,6 @@ export default {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',

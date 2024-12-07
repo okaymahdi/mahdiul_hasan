@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${primary.variable} ${secondary.variable} antialiased`}
+        className={`${primary.variable} ${secondary.variable} antialiased bg-background text-foreground`}
         cz-shortcut-listen="true"
       >
         {children}
