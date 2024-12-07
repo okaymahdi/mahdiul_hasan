@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 import { Poppins, Sora } from 'next/font/google'
 import './globals.css'
 
-const primary = Sora({
+const fontPrimary = Sora({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-primary',
 })
 
-const secondary = Poppins({
+const fontSecondary = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-secondary',
@@ -32,7 +32,7 @@ export default function RootLayout({
         content="telephone=no, date=no, email=no, address=no"
       />
       <body
-        className={`${primary.variable} ${secondary.variable} antialiased bg-background text-foreground`}
+        className={`${fontPrimary.variable} ${fontSecondary.variable} antialiased bg-background text-foreground`}
         cz-shortcut-listen="true"
       >
         <ThemeProvider

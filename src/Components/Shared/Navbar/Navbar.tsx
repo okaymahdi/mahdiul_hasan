@@ -65,7 +65,7 @@ export const Navbar = () => {
     <nav
       className={`${
         navBg ? 'bg-accent' : 'bg-background'
-      } container mx-auto flex shrink-0 justify-between items-center py-4  md:justify-around shadow-md dark:shadow-2xl fixed top-0 left-1/2 -translate-x-1/2 z-50 transition duration-300 delay-100 ease-in-out`}
+      } container mx-auto w-full flex shrink-0 justify-between items-center py-4 px-8  shadow-md dark:shadow-2xl fixed top-0 left-1/2 -translate-x-1/2 z-50 transition duration-300 delay-100 ease-in-out`}
     >
       {/* Logo */}
 
@@ -88,7 +88,7 @@ export const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-16 left-0 z-10 md:hidden p-4 w-full transition-all duration-300 ease-in-out ${
+        className={`absolute top-16 left-0 z-10 md:hidden bg-background p-4 w-full transition-all duration-300 ease-in-out ${
           isOpen ? 'translate-y-0 opacity-100' : '-translate-y-[200%] opacity-0'
         }`}
       >

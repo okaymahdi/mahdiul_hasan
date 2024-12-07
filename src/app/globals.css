@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -67,7 +63,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground flex flex-col justify-center min-h-screen m-0 mx-auto p-0;
+    @apply bg-background text-foreground flex flex-col justify-center min-h-screen m-0 mx-auto p-0 font-fontSecondary;
   }
 }
 
@@ -80,4 +76,37 @@ body {
   .nav__link {
     @apply relative text-base text-white font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-indigo-600  after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:bottom-0 after:left-0 after:origin-right;
   }
+
+  .text__bg {
+    background-image: linear-gradient(to right, #1d4ed8 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btn__gradient {
+  background-image: linear-gradient(
+    to right,
+    #1f12ff 0%,
+    #12d8fa 51%,
+    #1f12ff 100%
+  );
+  padding: 0.5rem 1rem;
+  text-align: center;
+  transition: 0.3s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px #12d8fa;
+}
+.btn__gradient:hover {
+  background-position: right center;
+  color: #fff;
 }
