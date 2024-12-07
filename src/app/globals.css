@@ -67,28 +67,17 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground flex flex-col justify-center min-h-screen m-0 mx-auto p-0;
   }
 }
 
 /* Custom Styles */
 @layer components {
   .heading__title {
-    @apply px-2 py-1 text-2xl font-bold text-tertiary uppercase  sm:ml-0 bg-gray-100 rounded-tr-2xl rounded-s-md;
+    @apply px-3 py-1 text-xl  font-semibold text-card-foreground uppercase  sm:ml-0  rounded-tr-xl rounded-s-md ring-1 ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground;
   }
 
   .nav__link {
     @apply relative text-base text-white font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-indigo-600  after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:bottom-0 after:left-0 after:origin-right;
-  }
-
-  .btn__primary {
-    @apply md:px-8 md:py-3 px-6 py-2 text-white text-sm md:text-lg font-semibold bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all duration-300 delay-300 ease-in-out;
-  }
-
-  .text__bg {
-    background-image: linear-gradient(to right, #1d4ed8 0%, #fff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }

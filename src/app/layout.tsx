@@ -1,5 +1,6 @@
+import { ThemeProvider } from '@/Provider/ThemeProvider'
 import type { Metadata } from 'next'
-import { Sora, Poppins } from 'next/font/google'
+import { Poppins, Sora } from 'next/font/google'
 import './globals.css'
 
 const primary = Sora({
@@ -25,12 +26,23 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
+      <meta
+        name="format-detection"
+        content="telephone=no, date=no, email=no, address=no"
+      />
       <body
         className={`${primary.variable} ${secondary.variable} antialiased bg-background text-foreground`}
         cz-shortcut-listen="true"
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -4,15 +4,15 @@ import { ChildrenType } from '@/Types/Types'
 
 const MainLayout = ({ children }: ChildrenType) => {
   return (
-    <div>
+    <>
       <nav>
         <Navbar />
       </nav>
-      <main>{children}</main>
+      <main className="flex-grow overflow-y-auto">{children}</main>
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   )
 }
 
